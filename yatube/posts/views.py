@@ -73,9 +73,9 @@ def post_detail(request, post_id):
     comments = post.comments.select_related('author')
     form = CommentForm()
     context = {
-            'post': post,
-            'comments': comments,
-            'form': form,
+        'post': post,
+        'comments': comments,
+        'form': form,
     }
     return render(request, 'posts/post_detail.html', context)
 

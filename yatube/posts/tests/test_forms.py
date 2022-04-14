@@ -47,7 +47,7 @@ class PostCreatFormTests(TestCase):
         )
         cls.form = PostForm()
 
-    @classmethod    
+    @classmethod
     def tearDownClass(cls):
         shutil.rmtree(TEMP_MEDIA_ROOT, ignore_errors=True)
         super().tearDownClass()
@@ -70,9 +70,9 @@ class PostCreatFormTests(TestCase):
             b'\x0A\x00\x3B'
         )
         uploaded = SimpleUploadedFile(
-                                name='small2.gif',
-                                content=small_gif,
-                                content_type='image/gif',
+            name='small2.gif',
+            content=small_gif,
+            content_type='image/gif',
         )
         form_data = {
             'text': 'Тестовая запись',
@@ -88,7 +88,6 @@ class PostCreatFormTests(TestCase):
             'posts:profile',
             kwargs={'username': self.user.username}
         ))
-        #self.post.refresh_from_db()
         post = Post.objects.all().order_by('-id')[0]
         self.assertEqual(Post.objects.count(), posts_count + 1)
         self.assertTrue(Post.objects.filter(text='Тестовая запись').exists())
