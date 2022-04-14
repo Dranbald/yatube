@@ -41,7 +41,7 @@ class Post(CreatedModel):
         blank=True,
         null=True
     )
-    
+
     def __str__(self):
         return self.text[:15]
 
@@ -84,8 +84,7 @@ class Follow(CreatedModel):
         verbose_name='Автор',
         on_delete=models.CASCADE,
     )
-    
+
     class Meta:
         verbose_name = 'Подписка'
         verbose_name_plural = 'Подписки'
-        

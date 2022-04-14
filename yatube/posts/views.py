@@ -73,9 +73,9 @@ def post_detail(request, post_id):
     comments = post.comments.select_related('author')
     form = CommentForm()
     context = {
-                'post': post,
-                'comments': comments,
-                'form': form,
+            'post': post,
+            'comments': comments,
+            'form': form,
     }
     return render(request, 'posts/post_detail.html', context)
 
@@ -86,7 +86,7 @@ def post_create(request):
     form = PostForm(
         request.POST or None,
         files=request.FILES or None,
-        )
+    )
     if request.method == 'POST' and form.is_valid():
         post = form.save(commit=False)
         post.author = request.user
@@ -134,7 +134,7 @@ def add_comment(request, post_id):
 def follow_index(request):
     posts = Post.objects.filter(
         author__following__user=request.user
-        ).select_related('author', 'group')
+    ).select_related('author', 'group')
     paginator = Paginator(posts, LIMIT)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
@@ -157,8 +157,8 @@ def profile_follow(request, username):
             author=author
         )
     return redirect('posts:profile', username)
-    
-   
+
+
 @login_required
 def profile_unfollow(request, username):
     author = get_object_or_404(User, username=username)

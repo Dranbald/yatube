@@ -12,7 +12,7 @@
     {% cache 20 index_page page_obj.number %}     
     <article>
       {% for post in page_obj %}
-      {% include 'includes/article.html' %}
+        {% include 'includes/article.html' %}
       {% endfor %}
     </article>
     {% endcache %}

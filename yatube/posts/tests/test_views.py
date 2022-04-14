@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.core.cache import cache
 from django.test import TestCase, Client
 from django.urls import reverse
 from django import forms
@@ -104,22 +105,32 @@ class PostPageTests(TestCase):
         self.assertEqual(post_text_0, 'Тестовый пост')
 
 
+class CacheTests(TestCase):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.post = Post.objects.create(
+            author=User.objects.create_user(username='varded'),
+            text='Тестовый пост №1')
+
+    def setUp(self):
+        self.guest_client = Client()
+        self.user = User.objects.create_user(username='John_1')
+        self.authorized_client = Client()
+        self.authorized_client.force_login(self.user)
+
     def test_cache_index(self):
         """Проверка кеширования главной страницы"""
-        response = self.author_client.get(reverse('posts:index'))
-        cache = response.content
-        form_data = {
-            'title': 'Заголовок2',
-            'text': 'Текст2',
-        }
-        response_2 = self.author_client.post(
-            reverse('posts:post_create'),
-            data=form_data,
-            follow=True
-        )
-        response = self.author_client.get(reverse('posts:index'))
-        cache_2 = response.content
-        self.assertEqual(cache, cache_2)
+        first_update = self.authorized_client.get(reverse('posts:index'))
+        post_cache = Post.objects.get(pk=1)
+        post_cache.text = 'Тестовый пост №2'
+        post_cache.save()
+        second_update = self.authorized_client.get(reverse('posts:index'))
+        self.assertEqual(first_update.content, second_update.content)
+        cache.clear()
+        third_update = self.authorized_client.get(reverse('posts:index'))
+        self.assertNotEqual(first_update.content, third_update.content)
+
 
 class FollowTests(TestCase):
     def setUp(self):
