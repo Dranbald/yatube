@@ -46,7 +46,7 @@ def profile(request, username):
     paginator = Paginator(posts, LIMIT)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    posts_count = Post.objects.filter(author=author).count()
+    posts_count = author.posts.count()
     if request.user.is_authenticated:
         following = Follow.objects.filter(
             user=request.user,
@@ -68,7 +68,8 @@ def post_detail(request, post_id):
         Post
         .objects
         .select_related('author')
-        .select_related('group'), pk=post_id
+        .select_related('group'),
+        pk=post_id
     )
     comments = post.comments.select_related('author')
     form = CommentForm()
@@ -108,7 +109,6 @@ def post_edit(request, post_id):
     )
     if form.is_valid():
         post = form.save()
-        post.save()
         return redirect('posts:post_detail', post_id)
     context = {
         'post': post,
@@ -147,12 +147,8 @@ def follow_index(request):
 @login_required
 def profile_follow(request, username):
     author = get_object_or_404(User, username=username)
-    following = Follow.objects.filter(
-        user=request.user,
-        author=author
-    ).exists()
-    if request.user != author and not following:
-        Follow.objects.create(
+    if request.user.is_authenticated and request.user != author:
+        Follow.objects.get_or_create(
             user=request.user,
             author=author
         )
@@ -162,7 +158,7 @@ def profile_follow(request, username):
 @login_required
 def profile_unfollow(request, username):
     author = get_object_or_404(User, username=username)
-    follow = Follow.objects.get(
+    follow = Follow.objects.filter(
         user=request.user,
         author=author
     )

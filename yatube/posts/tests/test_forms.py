@@ -94,6 +94,25 @@ class PostCreatFormTests(TestCase):
         self.assertEqual(post.group_id, form_data['group'])
         self.assertEqual(post.image.name, 'posts/' + uploaded.name)
 
+    def test_form_image(self):
+        empty_form = (b'')
+        empty_field = SimpleUploadedFile(
+            name='img.gif',
+            content=empty_form,
+            content_type='image/gif'
+        )
+        form_data = {
+            'text': 'Тестовая запись',
+            'group': self.group.id,
+            'image': empty_field,         
+        }
+        response = self.author_client.post(
+            reverse('posts:post_create'),
+            data=form_data,
+            follow=True
+        )
+        self.assertFormError(response, 'form', 'image', 'Отправленный файл пуст.')
+
     def test_edit_post(self):
         """Проверка формы редактирования поста в БД"""
         posts_count = Post.objects.count()
