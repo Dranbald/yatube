@@ -104,14 +104,19 @@ class PostCreatFormTests(TestCase):
         form_data = {
             'text': 'Тестовая запись',
             'group': self.group.id,
-            'image': empty_field,         
+            'image': empty_field,
         }
         response = self.author_client.post(
             reverse('posts:post_create'),
             data=form_data,
             follow=True
         )
-        self.assertFormError(response, 'form', 'image', 'Отправленный файл пуст.')
+        self.assertFormError(
+            response,
+            'form',
+            'image',
+            'Отправленный файл пуст.'
+        )
 
     def test_edit_post(self):
         """Проверка формы редактирования поста в БД"""
