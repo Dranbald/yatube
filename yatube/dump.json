@@ -85,11 +85,20 @@
   }
 },
 {
-  "model": "sessions.session",
-  "pk": "79t2yil8qe5udvxc6lhg18ve205sw4ow",
+  "model": "auth.user",
   "fields": {
-    "session_data": "OWI5MDIzMjk2NzhjNjk2YzdjOGZiNGY0NDE1ODZhMWQ3M2FiY2ExYTp7Il9hdXRoX3VzZXJfaWQiOiI3IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjNjA4OGRjN2U3NTdlMjNkYjhiY2RjMzA1ZjJmODA5NmZmMTc3YTE3In0=",
-    "expire_date": "2023-03-01T18:07:44.453Z"
+    "password": "pbkdf2_sha256$150000$pOnvSDDnSXTF$LDvXEBEOYi3OHuTdlbUh9HRgwTAFKgBaz8RnWFzH7xw=",
+    "last_login": "2023-02-15T19:14:56.050Z",
+    "is_superuser": true,
+    "username": "dranbald1",
+    "first_name": "",
+    "last_name": "",
+    "email": "Dranbald@yandex.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-02-15T19:14:15.282Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
@@ -650,58 +659,6 @@
 },
 {
   "model": "posts.post",
-  "pk": 40,
-  "fields": {
-    "pub_date": "2022-03-16T12:10:18.727Z",
-    "text": "\u0423\u0442\u0440\u043e\u043c\u044a \u0433\u043e\u043b\u044c\u0434\u044a \u0414\u0435\u0440\u0441\u0443 \u0423\u0437\u0430\u043b\u0430 \u043d\u0430 \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u043e \u0437\u0430\u0434\u0430\u043d\u043d\u044b\u0439 \u0432\u043e\u043f\u0440\u043e\u0441\u044a \u0441\u043e\u0433\u043b\u0430\u0441\u0435\u043d\u044a \u043b\u0438 \u043e\u043d\u044a \u043f\u043e\u0441\u0442\u0443\u043f\u0438\u0442\u044c \u043f\u0440\u043e\u0432\u043e\u0434\u043d\u0438\u043a\u043e\u043c\u044a \u0438\u0437\u044a\u044f\u0432\u0438\u043b\u044a \u0441\u0432\u043e\u0435 \u0441\u043e\u0433\u043b\u0430\u0441\u0456\u0435 \u0438 \u0441\u044a \u044d\u0442\u043e\u0433\u043e \u043c\u043e\u043c\u0435\u043d\u0442\u0430 \u043e\u043d\u044a \u0441\u0442\u0430\u043b\u044a \u0447\u043b\u0435\u043d\u043e\u043c \u044d\u043a\u0441\u043f\u0435\u0434\u0438\u0446\u0456\u0438",
-    "author": [
-      "admin"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.post",
-  "pk": 41,
-  "fields": {
-    "pub_date": "2022-03-27T12:12:49.121Z",
-    "text": "\u0411\u043e\u043b\u044c, \u0432\u044b\u0437\u0432\u0430\u043d\u043d\u0430\u044f \u043f\u0440\u043e\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u0435\u043c \u0434\u0430\u043d\u043d\u043e\u0433\u043e \u0441\u043f\u0440\u0438\u043d\u0442\u0430, \u043d\u0435 \u043e\u043f\u0438\u0441\u0430\u0442\u044c \u0441\u043b\u043e\u0432\u0430\u043c\u0438",
-    "author": [
-      "Dranbald"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.post",
-  "pk": 44,
-  "fields": {
-    "pub_date": "2022-03-27T12:26:49.940Z",
-    "text": "\u041d\u0435\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u043c\u0430\u044f \u0431\u043e\u043b\u044c \u043e\u0442 \u044d\u0442\u0438\u0445 \u0437\u0430\u0434\u0430\u043d\u0438\u0439",
-    "author": [
-      "Dranbald"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.post",
-  "pk": 46,
-  "fields": {
-    "pub_date": "2022-03-27T12:34:28.982Z",
-    "text": "\u0412\u0438\u0434\u0438\u043c\u043e \u043d\u0435 \u0432\u0441\u0435 \u0442\u0430\u043a \u043f\u043b\u043e\u0445\u043e",
-    "author": [
-      "Dranbald"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.post",
   "pk": 47,
   "fields": {
     "pub_date": "2022-03-27T12:48:04.113Z",
@@ -714,106 +671,6 @@
   }
 },
 {
-  "model": "posts.post",
-  "pk": 51,
-  "fields": {
-    "pub_date": "2022-03-27T15:35:25.659Z",
-    "text": "\u0411\u0435\u0437 \u043f\u043e\u043c\u043e\u0449\u0438 \u0432\u044b\u0441\u0448\u0438\u0445 \u0441\u0438\u043b, \u0437\u0434\u0435\u0441\u044c \u0431\u044b\u043b\u043e \u043d\u0435 \u043e\u0431\u043e\u0439\u0442\u0438\u0441\u044c, \u0447\u0443\u0432\u0441\u0442\u0432\u043e, \u0447\u0442\u043e \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b \u0431\u044b\u043b \u043d\u0435 \u0432\u043e\u0441\u043f\u0440\u0438\u043d\u044f\u0442, \u0434\u043e\u043b\u0436\u043d\u044b\u043c \u043e\u0431\u0440\u0430\u0437\u043e\u043c, \u043f\u043e\u0440\u0430 \u0438\u0441\u043a\u0430\u0442\u044c \u0431\u043e\u043b\u0435\u0435 \u043f\u043e\u043d\u044f\u0442\u043d\u0443\u044e \u0442\u0440\u0430\u043a\u0442\u043e\u0432\u043a\u0443 \u043c\u043e\u0438\u043c \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f\u043c!",
-    "author": [
-      "Dranbald"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.post",
-  "pk": 52,
-  "fields": {
-    "pub_date": "2022-03-30T12:42:41.055Z",
-    "text": "\u041f\u043e\u0432\u0442\u043e\u0440\u044f\u0435\u043c\u0441\u044f \u0434\u043b\u044f \u0442\u0435\u0441\u0442\u043e\u0432, \u043f\u0435\u0440\u0435\u043f\u0438\u0441\u0430\u043b\u0438 \u0432\u0441\u0435",
-    "author": [
-      "Dranbald"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.post",
-  "pk": 53,
-  "fields": {
-    "pub_date": "2022-04-01T17:32:44.521Z",
-    "text": "\u042f \u043b\u044e\u0431\u043b\u044e \u043c\u0430\u043d\u0443\u0430\u043b\u044c\u043d\u043e\u0435 \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435!",
-    "author": [
-      "Dranbald"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.post",
-  "pk": 54,
-  "fields": {
-    "pub_date": "2022-04-01T17:33:35.518Z",
-    "text": "\u0421\u043a\u043e\u0440\u0435\u0435 \u0431\u044b \u043f\u0438\u0441\u0430\u0442\u044c \u0430\u0432\u0442\u043e\u0442\u0435\u0441\u0442\u044b!",
-    "author": [
-      "Dranbald"
-    ],
-    "group": 2,
-    "image": ""
-  }
-},
-{
-  "model": "posts.comment",
-  "pk": 1,
-  "fields": {
-    "pub_date": "2022-04-10T18:10:14.682Z",
-    "post": 54,
-    "author": [
-      "Dranbald"
-    ],
-    "text": "\u041a\u0430\u043a \u0438\u0445 \u043f\u0438\u0441\u0430\u0442\u044c, \u044d\u0442\u043e \u0443\u0436\u0435 \u0441\u043e\u0432\u0441\u0435\u043c \u0434\u0440\u0443\u0433\u0430\u044f \u0438\u0441\u0442\u043e\u0440\u0438\u044f"
-  }
-},
-{
-  "model": "posts.comment",
-  "pk": 2,
-  "fields": {
-    "pub_date": "2022-04-10T18:10:14.682Z",
-    "post": 54,
-    "author": [
-      "Dranbald"
-    ],
-    "text": "\u0415\u0449\u0435 \u0440\u0430\u0437 \u043f\u0440\u043e\u0432\u0435\u0440\u0438\u043c"
-  }
-},
-{
-  "model": "posts.comment",
-  "pk": 3,
-  "fields": {
-    "pub_date": "2022-04-10T18:10:14.682Z",
-    "post": 54,
-    "author": [
-      "Dranbald"
-    ],
-    "text": "\u0418 \u0435\u0449\u0435 \u043e\u0434\u0438\u043d \u0440\u0430\u0437"
-  }
-},
-{
-  "model": "posts.comment",
-  "pk": 4,
-  "fields": {
-    "pub_date": "2022-04-10T18:10:44.457Z",
-    "post": 54,
-    "author": [
-      "Dranbald"
-    ],
-    "text": "\u041f\u043e\u0448\u043b\u0438 \u043f\u043e \u043d\u043e\u0432\u043e\u0439"
-  }
-},
-{
   "model": "posts.follow",
   "pk": 2,
   "fields": {
@@ -823,6 +680,32 @@
     ],
     "author": [
       "leo"
+    ]
+  }
+},
+{
+  "model": "posts.follow",
+  "pk": 3,
+  "fields": {
+    "pub_date": "2023-02-15T19:16:17.715Z",
+    "user": [
+      "dranbald1"
+    ],
+    "author": [
+      "leo"
+    ]
+  }
+},
+{
+  "model": "posts.follow",
+  "pk": 4,
+  "fields": {
+    "pub_date": "2023-02-15T19:16:35.537Z",
+    "user": [
+      "dranbald1"
+    ],
+    "author": [
+      "Dranbald"
     ]
   }
 },
@@ -2853,6 +2736,150 @@
     ],
     "object_id": "59",
     "object_repr": "\u0422\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043a\u0435",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.745Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "54",
+    "object_repr": "\u0421\u043a\u043e\u0440\u0435\u0435 \u0431\u044b \u043f\u0438\u0441\u0430\u0442",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.750Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "53",
+    "object_repr": "\u042f \u043b\u044e\u0431\u043b\u044e \u043c\u0430\u043d\u0443\u0430\u043b\u044c",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.753Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "52",
+    "object_repr": "\u041f\u043e\u0432\u0442\u043e\u0440\u044f\u0435\u043c\u0441\u044f \u0434\u043b\u044f",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.755Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "51",
+    "object_repr": "\u0411\u0435\u0437 \u043f\u043e\u043c\u043e\u0449\u0438 \u0432\u044b\u0441\u0448",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.758Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "46",
+    "object_repr": "\u0412\u0438\u0434\u0438\u043c\u043e \u043d\u0435 \u0432\u0441\u0435 \u0442",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.760Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "44",
+    "object_repr": "\u041d\u0435\u043e\u0442\u0432\u0440\u0430\u0442\u0438\u043c\u0430\u044f \u0431\u043e",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.763Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "41",
+    "object_repr": "\u0411\u043e\u043b\u044c, \u0432\u044b\u0437\u0432\u0430\u043d\u043d\u0430\u044f",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2023-02-15T19:15:44.766Z",
+    "user": [
+      "dranbald1"
+    ],
+    "content_type": [
+      "posts",
+      "post"
+    ],
+    "object_id": "40",
+    "object_repr": "\u0423\u0442\u0440\u043e\u043c\u044a \u0433\u043e\u043b\u044c\u0434\u044a \u0414",
     "action_flag": 3,
     "change_message": ""
   }
