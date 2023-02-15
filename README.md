@@ -51,6 +51,12 @@ python3 manage.py migrate
 python3 manage.py createsuperuser
 ```
 
+Заполнение базы данными:
+
+```
+python3 manage.py loaddata dump.json
+```
+
 Запустить проект:
 
 ```
