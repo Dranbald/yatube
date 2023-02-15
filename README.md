@@ -48,10 +48,6 @@ pip install -r requirements.txt
 Выполнить миграции:
 
 ```
-cd /yatube/yatube/
-```
-
-```
 python3 manage.py makemigrations
 ```
 
